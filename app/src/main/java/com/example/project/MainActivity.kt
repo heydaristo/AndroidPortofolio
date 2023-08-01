@@ -16,10 +16,12 @@ class MainActivity : AppCompatActivity() {
         val cardSkill = findViewById<CardView>(R.id.cardSkill)
         val cardHobby = findViewById<CardView>(R.id.cardHobby)
         val cardSchool = findViewById<CardView>(R.id.cardSchool)
+        val cardAbout = findViewById<CardView>(R.id.cardAboutMe)
 
         cardProfile.setOnClickListener{
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
 
@@ -36,5 +38,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Tombol School", Toast.LENGTH_SHORT).show()
         }
 
+        cardAbout.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

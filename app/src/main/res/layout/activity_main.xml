@@ -6,50 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="648dp"
         android:layout_height="365dp"
         android:scaleType="fitXY"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header" />
+        app:srcCompat="@drawable/top" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:text="Dashboard"
-        android:textSize="35dp"
+        android:textColor="#292826"
+        android:textSize="45dp"
         android:textStyle="bold"
-        android:textColor="#0066FF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="648dp"-->
+<!--        android:layout_height="365dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:srcCompat="@drawable/header" />-->
+
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="648dp"
+        android:layout_width="wrap_content"
         android:layout_height="365dp"
         android:scaleType="fitXY"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/header" />
+        app:srcCompat="@drawable/bottom" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
         android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -61,6 +74,7 @@
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginLeft="20sp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardUseCompatPadding="true">
@@ -88,8 +102,8 @@
                 android:id="@+id/cardPortofolio"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:layout_gravity="center"
                 android:layout_marginLeft="20sp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardUseCompatPadding="true">
@@ -124,6 +138,7 @@
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginLeft="20sp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardUseCompatPadding="true">
@@ -152,6 +167,7 @@
                 android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20sp"
+                android:layout_weight="1"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardUseCompatPadding="true">
@@ -204,6 +220,32 @@
                     android:layout_gravity="center_horizontal|bottom"
                     android:layout_marginBottom="10dp"
                     android:text="Hobby"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAboutMe"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="20sp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/baseline_info_24"
+                    app:tint="#FFC107" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:text="About Me"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
