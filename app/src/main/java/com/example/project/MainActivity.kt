@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         cardProfile.setOnClickListener{
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
-            finish()
 
         }
 
         cardPortofolio.setOnClickListener{
-            Toast.makeText(this, "Tombol Portofolio", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, PortofolioActivity::class.java)
+            startActivity(intent)
         }
         cardSkill.setOnClickListener{
             Toast.makeText(this, "Tombol SKill", Toast.LENGTH_SHORT).show()
