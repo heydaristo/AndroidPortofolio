@@ -21,21 +21,28 @@ class MainActivity : AppCompatActivity() {
         cardProfile.setOnClickListener{
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
-
+            finish()
         }
 
         cardPortofolio.setOnClickListener{
             val intent = Intent(this, PortofolioActivity::class.java)
             startActivity(intent)
+            finish()
         }
         cardSkill.setOnClickListener{
-            Toast.makeText(this, "Tombol SKill", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SkillsActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         cardHobby.setOnClickListener{
-            Toast.makeText(this, "Tombol Hobby", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HobbyActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         cardSchool.setOnClickListener{
-            Toast.makeText(this, "Tombol School", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SchoolActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         cardAbout.setOnClickListener {

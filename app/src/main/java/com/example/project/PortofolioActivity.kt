@@ -1,7 +1,9 @@
 package com.example.project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -13,6 +15,15 @@ class PortofolioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_portofolio)
+
+        val btnBack = findViewById<ImageView>(R.id.imgBack)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         listPortofolio.add(PortofolioData(
             R.drawable.web, "E-Voting", "Website untuk pemilihan Ketua osis dan Wakil Ketua Osis.", "https://github.com/heydaristo/EVOTING"
         ))

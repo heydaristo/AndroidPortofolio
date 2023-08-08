@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".HobbyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SkillsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SchoolActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutActivity"
             android:exported="false" />
         <activity
